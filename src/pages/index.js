@@ -14,7 +14,7 @@ const Home = (props) => {
                 <div className='text-4xl mt-5 mb-5 text-amber-900'>
                     Select A Project
                 </div>
-                <div className='grid grid-cols-3 w-full h-full pt-3'>
+                <div className='grid grid-cols-3 w-full h-full pt-3 overflow-x-scroll'>
                     <div 
                         className='col-span-1 bg-amber-400 rounded-2xl ml-10 mb-10 mr-4 outline hover:outline-4 outline-amber-600 text-amber-900'
                         onClick={() => {
@@ -52,7 +52,7 @@ const Home = (props) => {
                         <div className='flex flex-col w-full h-full p-0 m-0 rounded-2xl shadow-xl'>
                             <div className='h-10 px-4 pt-2 bg-amber-300 rounded-t-2xl'>
                                 <div className='h-1 text-xl'>
-                                    Gerald's Portfolio
+                                    ETH Guesstimater
                                 </div>
                             </div>
                             <div className='h-3/6 px-4 bg-amber-300 overflow-hidden'>
@@ -63,8 +63,16 @@ const Home = (props) => {
                                 </img>
                             </div>
                             <div className='h-3/6 pb-4 px-4 bg-amber-300 rounded-b-2xl'>
-                                <div className='w-full h-full bg-amber-100 rounded-2xl text-lg mt-2 p-2 text-amber-900'>
-                                    Gerald's Personal portfolio
+                                <div className='flex flex-col w-full h-full bg-amber-100 rounded-2xl mt-2 p-2 text-amber-900'>
+                                    <div className='text-xs md:text-sm lg:text-md'>
+                                        <span className='font-bold'>Overview: </span> A web app that lets you know when you should make transactions in ETH to reduce gas fees.
+                                    </div>
+                                    <div className='text-xs md:text-sm lg:text-md pt-2'>
+                                        <span className='font-bold'>Tech Stack: </span> React, Python, JavaScript, CRA, Tailwind, MongoDB.
+                                    </div>
+                                    <div className='mt-auto text-xs md:text-sm lg:text-md text-right'>
+                                        <span className='font-bold'>50% Complete</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +80,7 @@ const Home = (props) => {
                     <div 
                         className='col-span-1 bg-amber-400 rounded-2xl mx-10 mb-10 mr-10 ml-4 outline hover:outline-4 outline-amber-600 text-amber-900'
                         onClick={() => {
-                            navigate("/portfolio")
+                            navigate("/liquid-magic")
                         }}
                     >
                         
@@ -90,12 +98,15 @@ const Home = (props) => {
                                 </img>
                             </div>
                             <div className='h-3/6 pb-4 px-4 bg-amber-300 rounded-b-2xl'>
-                                <div className='w-full h-full bg-amber-100 rounded-2xl mt-2 p-2 text-amber-900'>
-                                    <div>
+                                <div className='flex flex-col w-full h-full bg-amber-100 rounded-2xl mt-2 p-2 text-amber-900'>
+                                    <div className='text-xs md:text-sm lg:text-md'>
                                         <span className='font-bold'>Overview: </span> A market-making website for Magic The Gather Trading Cards with a secret ingredient - liquidity.
                                     </div>
-                                    <div className='pt-2'>
+                                    <div className='text-xs md:text-sm lg:text-md pt-2'>
                                         <span className='font-bold'>Tech Stack: </span> (Front-end) React, TypeScript, Next.js, Tailwind. (Back-end) Typescript, NestJs, PostgreSQL, EC2, RDS.
+                                    </div>
+                                    <div className='mt-auto text-xs md:text-sm lg:text-md text-right'>
+                                        <span className='font-bold'>10% Complete</span>
                                     </div>
                                 </div>
                             </div>
