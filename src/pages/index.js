@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
-import comingSoon from "../imgs/comingSoon.jpg"
+import comingSoon from "../imgs/coming-soon.jpg"
+import { ProjectCard } from '../components/Directory/ProjectCard';
+import coverLetterRobot  from "../imgs/cover-letter-robot.jpg"
+import bananas from "../imgs/bananas.jpg"
+import geraldYeo from "../imgs/gerald-yeo-professional-pic.jpg"
 
 const Home = (props) => {
     const navigate = useNavigate();
@@ -9,109 +13,98 @@ const Home = (props) => {
 
     
 	return (
-		<div className='flex flex-col justify-center items-center h-screen w-full bg-orange-doggo bg-cover bg-center p-10 '>
-            <div className='flex flex-col justify-center items-center bg-white/75 h-full w-full sm:rounded-none md:rounded-2xl'>
-                <div className='text-4xl mt-5 mb-5 text-amber-900'>
-                    Select A Project
-                </div>
-                <div className='grid grid-cols-3 w-full h-full pt-3 overflow-x-scroll'>
-                    <div 
-                        className='col-span-1 bg-amber-400 rounded-2xl ml-10 mb-10 mr-4 outline hover:outline-4 outline-amber-600 text-amber-900'
-                        onClick={() => {
-                            navigate("/portfolio")
-                        }}
+		<div className='flex flex-col justify-center items-center h-screen w-full bg-brown-wood-1 bg-cover bg-center p-10 '>
+            <div className='flex flex-col justify-center items-center bg-white/30 h-full w-full rounded-2xl'>
+                <div className='flex flex-row w-full h-full p-10 overflow-x-scroll'>
+                    <ProjectCard 
+                        Title="ETH Guesstimater"
+                        Navigate={true}
+                        Image={comingSoon}
+                        Link="/portfolio"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> A web app that lets you know when you should make transactions in ETH to reduce gas fees.
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> React, Python, JavaScript, CRA, Tailwind, MongoDB.
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>50% Complete</span> 
+                        }
                     >
-                        
-                        <div className='flex flex-col w-full h-full p-0 m-0 rounded-2xl shadow-xl'>
-                            <div className='h-10 px-4 pt-2 bg-amber-300 rounded-t-2xl'>
-                                <div className='h-1 text-xl'>
-                                    Gerald's Portfolio
-                                </div>
-                            </div>
-                            <div className='h-3/6 px-4 bg-amber-300 overflow-hidden'>
-                                <img 
-                                    className="w-full h-full object-fill rounded-2xl" 
-                                    src={comingSoon} 
-                                    alt='<a href="https://www.freepik.com/free-vector/coming-soon-construction-yellow-background-design_8562867.htm#query=coming%20soon&position=23&from_view=keyword&track=ais">Image by starline</a> on Freepik'>
-                                </img>
-                            </div>
-                            <div className='h-3/6 pb-4 px-4 bg-amber-300 rounded-b-2xl'>
-                                <div className='w-full h-full bg-amber-100 rounded-2xl text-lg mt-2 p-2 text-amber-900'>
-                                    Gerald's Personal portfolio
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div 
-                        className='col-span-1 bg-amber-400 rounded-2xl mx-6 mb-10 outline hover:outline-4 outline-amber-600 text-amber-900'
-                        onClick={() => {
-                            navigate("/portfolio")
-                        }}
+                    </ProjectCard>
+                    <ProjectCard 
+                        Title="Liquid Magic"
+                        Navigate={true}
+                        Image={comingSoon}
+                        Link="/liquid-magic"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> A market-making website for Magic The Gather Trading Cards with a secret ingredient - liquidity.
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> (Front-end) React, TypeScript, Next.js, Tailwind. (Back-end) Typescript, NestJs, PostgreSQL, EC2, RDS.
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>10% Complete</span> 
+                        }
                     >
-                        
-                        <div className='flex flex-col w-full h-full p-0 m-0 rounded-2xl shadow-xl'>
-                            <div className='h-10 px-4 pt-2 bg-amber-300 rounded-t-2xl'>
-                                <div className='h-1 text-xl'>
-                                    ETH Guesstimater
-                                </div>
-                            </div>
-                            <div className='h-3/6 px-4 bg-amber-300 overflow-hidden'>
-                                <img 
-                                    className="w-full h-full object-fill rounded-2xl" 
-                                    src={comingSoon} 
-                                    alt='<a href="https://www.freepik.com/free-vector/coming-soon-construction-yellow-background-design_8562867.htm#query=coming%20soon&position=23&from_view=keyword&track=ais">Image by starline</a> on Freepik'>
-                                </img>
-                            </div>
-                            <div className='h-3/6 pb-4 px-4 bg-amber-300 rounded-b-2xl'>
-                                <div className='flex flex-col w-full h-full bg-amber-100 rounded-2xl mt-2 p-2 text-amber-900'>
-                                    <div className='text-xs md:text-sm lg:text-md'>
-                                        <span className='font-bold'>Overview: </span> A web app that lets you know when you should make transactions in ETH to reduce gas fees.
-                                    </div>
-                                    <div className='text-xs md:text-sm lg:text-md pt-2'>
-                                        <span className='font-bold'>Tech Stack: </span> React, Python, JavaScript, CRA, Tailwind, MongoDB.
-                                    </div>
-                                    <div className='mt-auto text-xs md:text-sm lg:text-md text-right'>
-                                        <span className='font-bold'>50% Complete</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div 
-                        className='col-span-1 bg-amber-400 rounded-2xl mx-10 mb-10 mr-10 ml-4 outline hover:outline-4 outline-amber-600 text-amber-900'
-                        onClick={() => {
-                            navigate("/liquid-magic")
-                        }}
+                    </ProjectCard>
+                    <ProjectCard 
+                        Title="Cover Letter Generator"
+                        Navigate={false}
+                        Link="https://coverletterv1.herokuapp.com/"
+                        Image={coverLetterRobot}
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> Generates cover letters cost-effectively with OpenAI’s GPT-3 model and custom prompts given a user’s resume and a job description.
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> (Front-end) React, JavaScript.
+                                <div className='pt-2'></div>
+                                <div className='font-bold text-center text-xl'>UNMAINTAINED</div>
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
                     >
-                        
-                        <div className='flex flex-col w-full h-full p-0 m-0 rounded-2xl shadow-xl'>
-                            <div className='h-10 px-4 pt-2 bg-amber-300 rounded-t-2xl'>
-                                <div className='h-1 text-xl'>
-                                    Liquid Magic
-                                </div>
-                            </div>
-                            <div className='h-3/6 px-4 bg-amber-300 overflow-hidden'>
-                                <img 
-                                    className="w-full h-full object-fill rounded-2xl" 
-                                    src={comingSoon} 
-                                    alt='<a href="https://www.freepik.com/free-vector/coming-soon-construction-yellow-background-design_8562867.htm#query=coming%20soon&position=23&from_view=keyword&track=ais">Image by starline</a> on Freepik'>
-                                </img>
-                            </div>
-                            <div className='h-3/6 pb-4 px-4 bg-amber-300 rounded-b-2xl'>
-                                <div className='flex flex-col w-full h-full bg-amber-100 rounded-2xl mt-2 p-2 text-amber-900'>
-                                    <div className='text-xs md:text-sm lg:text-md'>
-                                        <span className='font-bold'>Overview: </span> A market-making website for Magic The Gather Trading Cards with a secret ingredient - liquidity.
-                                    </div>
-                                    <div className='text-xs md:text-sm lg:text-md pt-2'>
-                                        <span className='font-bold'>Tech Stack: </span> (Front-end) React, TypeScript, Next.js, Tailwind. (Back-end) Typescript, NestJs, PostgreSQL, EC2, RDS.
-                                    </div>
-                                    <div className='mt-auto text-xs md:text-sm lg:text-md text-right'>
-                                        <span className='font-bold'>10% Complete</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </ProjectCard>
+                    <ProjectCard 
+                        Title="GoingBananas"
+                        Navigate={false}
+                        Image={bananas}
+                        Link="https://goingbananasv7.herokuapp.com/"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> A web application that detects ripe bananas with TensorFlow and utilizes user location data to recommend shops selling ripe bananas.
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> HTML, CSS, JavaScript, EJS, Node.js, Express.js, MongoDB Atlas
+                                <div className='pt-2'></div>
+                                <div className='font-bold text-center text-xl'>UNMAINTAINED</div>
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </ProjectCard>
+                    <ProjectCard 
+                        Title="Gerald's LinkedIn"
+                        Navigate={false}
+                        Image={geraldYeo}
+                        Link="https://www.linkedin.com/in/gerald-yeo-934099187/"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> Come and take a look at my LinkedIn profile!
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> Unfortunately, I did not design LinkedIn.
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </ProjectCard>
                 </div>
             </div>
 		</div>
