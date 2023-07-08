@@ -42,7 +42,12 @@ const Home = (props) => {
             sizeStyle["flex-basis"] = "400px"
             textTailwind = "text-xs"
             titleTailwind = "text-xl"
-        } else if (width < 1000) {
+        } else if (width < 800) { 
+            sizeStyle["width"] = "250px"
+            sizeStyle["flex-basis"] = "350px"
+            textTailwind = "text-xs"
+            titleTailwind = "text-xl"
+        }  else if (width < 1000) {
             sizeStyle["width"] = "400px"
             sizeStyle["flex-basis"] = "600px"
             textTailwind = "text-xl"
@@ -73,8 +78,8 @@ const Home = (props) => {
     }
     
     return (
-        <div className='flex justify-center items-center h-screen w-full bg-brown-wood-1 bg-cover bg-center p-10'>
-            <div className={'flex justify-center items-center bg-white/30 rounded-2xl lg:rounded-[50px] h-full w-full ' + (isVertical ? "px-10" : "py-10")}>
+        <div className='flex justify-center items-center h-screen w-full bg-brown-wood-1 bg-cover bg-center p-5 md:p-10'>
+            <div className={'flex justify-center items-center bg-white/30 rounded-2xl lg:rounded-[50px] h-full w-full ' + (isVertical ? "px-3 md:px-10" : "py-3 md:py-10")}>
                 <div className={cardContainerClassNames}>
                     <ProjectCard 
                         Title="ETH Guesstimater"
