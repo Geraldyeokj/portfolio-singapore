@@ -7,7 +7,7 @@ export const ProjectCard = (props) => {
     //const locationState = useLocation();
 	//console.log("props", props);
     const conditionalClasses = (props.Vertical ? "my-5" : "mx-5")
-    const cardClassNames = conditionalClasses + ` flex bg-amber-300 rounded-2xl outline outline-amber-600 hover:outline-4 hover:outline-blue-500 text-amber-900`
+    const cardClassNames = conditionalClasses + ` flex bg-amber-300 rounded-2xl ring ring-amber-600 hover:ring-4 hover:ring-blue-500 text-amber-900`
     console.log("cardClassNames", props.SizeStyle, cardClassNames);
 	return (
 		<div 
