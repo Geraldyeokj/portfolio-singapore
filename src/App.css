@@ -46,25 +46,30 @@
   width: 10px;
   height: 10px;
   background: rgba(0,0,0,0);
+  display: none;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   width: 10px;
   background: rgba(0,0,0,0);
+  display: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0);
   border-radius: 10px;
+  display: none;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0,0,0,0);
+  display: none;
 }
 
 ::-webkit-scrollbar-corner {
   background: rgba(0,0,0,0);
+  display: none;
 }
