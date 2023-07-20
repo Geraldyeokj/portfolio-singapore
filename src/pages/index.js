@@ -5,6 +5,7 @@ import { ProjectCard } from '../components/Directory/ProjectCard';
 import coverLetterRobot  from "../imgs/cover-letter-robot.jpg"
 import bananas from "../imgs/bananas.jpg"
 import geraldYeo from "../imgs/gerald-yeo-professional-pic.jpg"
+import sampleCad from "../imgs/sampleCad.png"
 
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -82,6 +83,94 @@ const Home = (props) => {
             <div className={'flex justify-center items-center bg-white/30 rounded-2xl lg:rounded-[50px] h-full w-full ' + (isVertical ? "px-3 md:px-10" : "py-3 md:py-10")}>
                 <div className={cardContainerClassNames}>
                     <ProjectCard 
+                        Title="Cover Letter Generator"
+                        Vertical = {isVertical}
+                        SizeStyle = {sizeStyle} 
+                        TextTailwind={textTailwind}
+                        TitleTailwind={titleTailwind}
+                        Navigate={false}
+                        Link="https://coverletterv1.herokuapp.com/"
+                        Image={coverLetterRobot}
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> Generates cover letters cost-effectively with OpenAI’s GPT-3 model and custom prompts given a user’s resume and a job description.
+                                <div className='pt-1'></div>
+                                <span className='font-bold'>Tech Stack: </span> (Front-end) React, JavaScript.
+                                <div className='pt-1'></div>
+                                <div className='font-bold text-center'>UNMAINTAINED</div>
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </ProjectCard>
+                    <ProjectCard 
+                        Title="GoingBananas"
+                        Vertical = {isVertical}
+                        SizeStyle = {sizeStyle} 
+                        TextTailwind={textTailwind}
+                        TitleTailwind={titleTailwind}
+                        Navigate={false}
+                        Image={bananas}
+                        Link="https://goingbananasv7.herokuapp.com/"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> A web application that detects ripe bananas with TensorFlow and utilizes user location data to recommend shops selling ripe bananas.
+                                <div className='pt-1'></div>
+                                <span className='font-bold'>Tech Stack: </span> HTML, CSS, JavaScript, EJS, Node.js, Express.js, MongoDB Atlas.
+                                <div className='pt-1'></div>
+                                <div className='font-bold text-center'>UNMAINTAINED</div>
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </ProjectCard>
+                    <ProjectCard 
+                        Title="CAD Designs & GIS Analysis"
+                        Vertical = {isVertical}
+                        SizeStyle = {sizeStyle} 
+                        TextTailwind={textTailwind}
+                        TitleTailwind={titleTailwind}
+                        Navigate={false}
+                        Image={sampleCad}
+                        Link="https://geraldyeo.site/"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> CAD designs of products I worked on as a Product Manager in the Army and GIS analyses I did in school.
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> Sketchup, Cura, R, Wordpress.
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </ProjectCard>
+                    <ProjectCard 
+                        Title="Gerald's LinkedIn"
+                        Vertical = {isVertical}
+                        SizeStyle = {sizeStyle} 
+                        TextTailwind={textTailwind}
+                        TitleTailwind={titleTailwind}
+                        Navigate={false}
+                        Image={geraldYeo}
+                        Link="https://www.linkedin.com/in/gerald-yeo-934099187/"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> Come and take a look at my LinkedIn profile!
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> Unfortunately, I did not design LinkedIn.
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </ProjectCard>
+                    <ProjectCard 
                         Title="ETH Guesstimater"
                         Vertical = {isVertical}
                         SizeStyle = {sizeStyle} 
@@ -120,73 +209,6 @@ const Home = (props) => {
                         }
                         Progress={
                             <span className='font-bold'>10% Complete</span> 
-                        }
-                    >
-                    </ProjectCard>
-                    <ProjectCard 
-                        Title="Cover Letter Generator"
-                        Vertical = {isVertical}
-                        SizeStyle = {sizeStyle} 
-                        TextTailwind={textTailwind}
-                        TitleTailwind={titleTailwind}
-                        Navigate={false}
-                        Link="https://coverletterv1.herokuapp.com/"
-                        Image={coverLetterRobot}
-                        Description={
-                            <>
-                                <span className='font-bold'>Overview: </span> Generates cover letters cost-effectively with OpenAI’s GPT-3 model and custom prompts given a user’s resume and a job description.
-                                <div className='pt-1'></div>
-                                <span className='font-bold'>Tech Stack: </span> (Front-end) React, JavaScript.
-                                <div className='pt-1'></div>
-                                <div className='font-bold text-center'>UNMAINTAINED</div>
-                            </>
-                        }
-                        Progress={
-                            <span className='font-bold'>100% Complete</span> 
-                        }
-                    >
-                    </ProjectCard>
-                    <ProjectCard 
-                        Title="GoingBananas"
-                        Vertical = {isVertical}
-                        SizeStyle = {sizeStyle} 
-                        TextTailwind={textTailwind}
-                        TitleTailwind={titleTailwind}
-                        Navigate={false}
-                        Image={bananas}
-                        Link="https://goingbananasv7.herokuapp.com/"
-                        Description={
-                            <>
-                                <span className='font-bold'>Overview: </span> A web application that detects ripe bananas with TensorFlow and utilizes user location data to recommend shops selling ripe bananas.
-                                <div className='pt-1'></div>
-                                <span className='font-bold'>Tech Stack: </span> HTML, CSS, JavaScript, EJS, Node.js, Express.js, MongoDB Atlas
-                                <div className='pt-1'></div>
-                                <div className='font-bold text-center'>UNMAINTAINED</div>
-                            </>
-                        }
-                        Progress={
-                            <span className='font-bold'>100% Complete</span> 
-                        }
-                    >
-                    </ProjectCard>
-                    <ProjectCard 
-                        Title="Gerald's LinkedIn"
-                        Vertical = {isVertical}
-                        SizeStyle = {sizeStyle} 
-                        TextTailwind={textTailwind}
-                        TitleTailwind={titleTailwind}
-                        Navigate={false}
-                        Image={geraldYeo}
-                        Link="https://www.linkedin.com/in/gerald-yeo-934099187/"
-                        Description={
-                            <>
-                                <span className='font-bold'>Overview: </span> Come and take a look at my LinkedIn profile!
-                                <div className='pt-2'></div>
-                                <span className='font-bold'>Tech Stack: </span> Unfortunately, I did not design LinkedIn.
-                            </>
-                        }
-                        Progress={
-                            <span className='font-bold'>100% Complete</span> 
                         }
                     >
                     </ProjectCard>
