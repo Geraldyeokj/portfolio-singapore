@@ -10,6 +10,7 @@ import { ResponsiveLine } from '@nivo/line'
 export const MyResponsiveLine = ({ data /* see data tab */ }) => (
     <ResponsiveLine
         data={data}
+        colors={["hsl(237, 85%, 54%)", "hsl(5, 99%, 75%)"]}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ 
             type: 'linear',
@@ -20,7 +21,7 @@ export const MyResponsiveLine = ({ data /* see data tab */ }) => (
             type: 'linear',
             min: 'auto',
             max: 'auto',
-            stacked: true,
+            stacked: false,
             reverse: false
         }}
         yFormat=" >-.2f"

@@ -14,6 +14,12 @@ const fetchYhat = () => {
         const ret_arr = [
             {
                 "id": "Predicted",
+                "color": "hsl(249, 87%, 50%)",
+                "data": []
+            },
+            {
+                "id": "Actual",
+                "color": "hsl(180, 87%, 59%)",
                 "data": []
             }
         ];
@@ -24,6 +30,14 @@ const fetchYhat = () => {
                 ret_arr[0].data.push({
                     x: pot_x,
                     y: pot_y
+                });
+            }
+            const pot_actl_x = Number(element[0])
+            const pot_actl_y = Number(element[2])
+            if (!(isNaN(pot_actl_x) || isNaN(pot_actl_y) || pot_actl_y == 0)) {
+                ret_arr[1].data.push({
+                    x: pot_actl_x,
+                    y: pot_actl_y
                 });
             }
         });
