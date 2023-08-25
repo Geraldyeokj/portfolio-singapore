@@ -1,7 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { LineChart1 } from '../../charts/lineChart1';
-//import { data } from './lineChartTestData';
-// import { data } from './lineChartTestData2'
 import { MyResponsiveLine } from './nivoLine2';
 
 const fetchYhat = () => {
@@ -10,7 +7,7 @@ const fetchYhat = () => {
         return response.json()
       })
       .then(data => {
-        console.log(data)
+        //console.log(data)
         const ret_arr = [
             {
                 "id": "Predicted",
@@ -45,76 +42,54 @@ const fetchYhat = () => {
       })
   }
 
-
-
 const LineChartTemplate = () => {
-    
     const [data, setData] = useState([]);
-    useEffect(() => {
+    const [lastUpdated, setLastUpdated] = useState();
+    const [firstRun, setFirstRun] = useState(true);
+    const fetchMetrics = () => {
+        // retrieve and then setData()
         fetchYhat().then(info => {
             console.log("RES", info)
             setData(info);
+            const today = new Date();
+            const time = today.getHours() + ":" 
+            + ((today.getMinutes() < 10) ? "0" + today.getMinutes() : today.getMinutes()) + ":" 
+            + ((today.getSeconds() < 10) ? "0" + today.getSeconds() : today.getSeconds());
+            setLastUpdated(time);
+            
         })
+    }
+    useEffect(() => {
+        if (firstRun) {
+            fetchMetrics();
+            setFirstRun(false);
+        } else {
+            const interval = setInterval(() => {
+                fetchMetrics();
+            },60*1000);
+            return () => clearInterval(interval);
+        }
     }, []);
-    console.log("DATA ================================================")
-    
-    
-    /*
-    const data = [{
-        id: 'fake corp. A',
-        data: [{
-          x: 0,
-          y: 7
-        }, {
-          x: 1,
-          y: 5
-        }, {
-          x: 2,
-          y: 11
-        }, {
-          x: 3,
-          y: 9
-        }, {
-          x: 4,
-          y: 13
-        }, {
-          x: 7,
-          y: 16
-        }, {
-          x: 9.5,
-          y: 12.333
-        }]
-    }];
-    */
-    
-    console.log("data", data)
 	return (
         <>
-            { data.length ? 
-                <div className='flex flex-col justify-center'>
-                    <div className='flex flex-col justify-center items-center py-10'>
-                        <div className="h-screen w-full">
-                            {MyResponsiveLine({data})}
+            { data.length ?
+                <div className="h-screen w-full py-10">
+                    <div className='text-center text-2xl'>
+                        The Semi-Crystal Ball
+                    </div>
+                    {MyResponsiveLine({data})}
+                    <div className='justify-center items-center w-full'>
+                        <div className='text-right pb-5 pr-5'>
+                            Last Updated: {lastUpdated}
                         </div>
                     </div>
-                </div> :
-                "LOADING" 
+                </div>
+                :
+                "LOADING!" 
+                
             }
         </>
 	);
 };
 
-
-{/* <>
-            { data.length ? 
-                <div className='flex flex-col justify-center'>
-                    <div className='flex flex-col justify-center items-center py-10'>
-                        <div className="h-screen w-full">
-                            {LineChart1({data})}
-                        </div>
-                    </div>
-                </div> :
-                "LOADING" 
-            }
-        </> */}
 export default LineChartTemplate;

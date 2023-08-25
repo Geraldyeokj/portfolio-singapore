@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate }
     from 'react-router-dom';
 import Home from './pages';
 import PageNotFound from './pages/PageNotFound';
-import LineChartTemplate from './pages/ethgastimater/gastimater';
+import GastimaterMainPage from './pages/ethgastimater/gastimater-main-page';
 
 function App() {
     return (
@@ -12,7 +12,8 @@ function App() {
             {/* <Navbar /> */}
             <Routes>
                 <Route exact path='/' exact element={<Home />} />
-                <Route exact path='/ethgastimater' element={<LineChartTemplate />} />
+                <Route exact path='/ethgastimater' element={<GastimaterMainPage />} />
+                <Route exact path='/ethgastimater2' element={<GastimaterMainPage />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         </Router>
