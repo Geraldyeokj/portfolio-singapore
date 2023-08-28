@@ -6,6 +6,7 @@ import coverLetterRobot  from "../imgs/cover-letter-robot.jpg"
 import bananas from "../imgs/bananas.jpg"
 import geraldYeo from "../imgs/gerald-yeo-professional-pic.jpg"
 import sampleCad from "../imgs/sampleCad.png"
+import forecast from "../imgs/forecast.png"
 
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -177,8 +178,8 @@ const Home = (props) => {
                         TextTailwind={textTailwind}
                         TitleTailwind={titleTailwind}
                         Navigate={true}
-                        Image={comingSoon}
-                        Link="/portfolio"
+                        Image={forecast}
+                        Link="/ethgastimater"
                         Description={
                             <>
                                 <span className='font-bold'>Overview: </span> A web app that lets you know when you should make transactions in ETH to reduce gas fees.

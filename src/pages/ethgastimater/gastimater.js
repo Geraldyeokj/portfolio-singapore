@@ -84,7 +84,7 @@ const LineChartTemplate = () => {
             { data.length ?
                 <div className="h-screen w-full py-14">
                     <div className='text-center text-2xl'>
-                        The Semi-Crystal Ball
+                        Estimated Gas Prices For The Next 12 Hours
                     </div>
                     {data[0] ? MyResponsiveLine({data}) : "Unable to retrieve data :/"}
                     <div className='justify-center items-center w-full'>

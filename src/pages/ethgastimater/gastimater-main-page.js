@@ -19,19 +19,7 @@ const GastimaterMainPage = () => {
                 <LineChartTemplate />
             </div>
             <div className='flex h-screen w-full'>
-                <div className='grid grid-cols-2 m-auto w-full'>
-                    <div className='col-span-2 text-4xl text-center pb-3'>
-                        How Our Gastimater Works
-                    </div>
-                    <div className='col-span-1'>
-                        <Dropdown />
-                    </div>
-                    <div className='col-span-1'>
-                        <div className='text-xl text-center pb-3'>
-                            Image
-                        </div>
-                    </div>
-                </div>
+                <Dropdown />
             </div>
         </div>
 	);
