@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { redirect, useLocation, useNavigate } from "react-router-dom";
 import comingSoon from "../../imgs/comingSoon.jpg"
+import staticportal from "../../imgs/staticportal.png"
 
 export const PortalCard = (props) => {
     const navigate = useNavigate();
@@ -26,8 +27,12 @@ export const PortalCard = (props) => {
                 <div className={'h-3/6 px-4 bg-red-300 overflow-hidden ' + (props.Vertical ? "mt-3" : "xl:mt-3")}>
                     <img 
                         className="w-full h-full object-fill rounded-2xl" 
-                        src={props.Image} 
-                        alt='<a href="https://www.freepik.com/free-vector/coming-soon-construction-yellow-background-design_8562867.htm#query=coming%20soon&position=23&from_view=keyword&track=ais">Image by starline</a> on Freepik'>
+                        src={props.Image}
+                        onError={({ currentTarget }) => {
+                            currentTarget.onerror = null; // prevents looping
+                            currentTarget.src=staticportal;
+                          }}
+                    >
                     </img>
                 </div>
                 <div className='h-3/6 pb-4 px-4 bg-red-300 rounded-b-2xl lg:rounded-b-[40px]'>

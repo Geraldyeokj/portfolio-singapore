@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.eb5c6027.css",
-    "main.js": "/static/js/main.649199b4.js",
+    "main.js": "/static/js/main.18178ac9.js",
     "static/js/787.f712bc99.chunk.js": "/static/js/787.f712bc99.chunk.js",
     "static/media/red-portal-resized.gif": "/static/media/red-portal-resized.619b7cf4e540b72b4c5e.gif",
     "static/media/brown-wooden-floor.jpg": "/static/media/brown-wooden-floor.ba4f66d794097b62fe93.jpg",
+    "static/media/staticportal.png": "/static/media/staticportal.71129a4ce3f2beb3259e.png",
     "static/media/freshfromtheoven.jpg": "/static/media/freshfromtheoven.683f6ace7580d8a6f573.jpg",
     "static/media/aperiod.jpg": "/static/media/aperiod.1507dab4f6aedd9102c8.jpg",
     "static/media/comingSoon.jpg": "/static/media/comingSoon.9067fbe2bb361b799f24.jpg",
@@ -19,11 +20,11 @@
     "static/media/cover-letter-robot.jpg": "/static/media/cover-letter-robot.133dbc29138b883aee58.jpg",
     "index.html": "/index.html",
     "main.eb5c6027.css.map": "/static/css/main.eb5c6027.css.map",
-    "main.649199b4.js.map": "/static/js/main.649199b4.js.map",
+    "main.18178ac9.js.map": "/static/js/main.18178ac9.js.map",
     "787.f712bc99.chunk.js.map": "/static/js/787.f712bc99.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb5c6027.css",
-    "static/js/main.649199b4.js"
+    "static/js/main.18178ac9.js"
   ]
 }
