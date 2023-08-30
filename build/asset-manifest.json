@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb5c6027.css",
+    "main.js": "/static/js/main.649199b4.js",
+    "static/js/787.f712bc99.chunk.js": "/static/js/787.f712bc99.chunk.js",
+    "static/media/red-portal-resized.gif": "/static/media/red-portal-resized.619b7cf4e540b72b4c5e.gif",
+    "static/media/brown-wooden-floor.jpg": "/static/media/brown-wooden-floor.ba4f66d794097b62fe93.jpg",
+    "static/media/freshfromtheoven.jpg": "/static/media/freshfromtheoven.683f6ace7580d8a6f573.jpg",
+    "static/media/aperiod.jpg": "/static/media/aperiod.1507dab4f6aedd9102c8.jpg",
+    "static/media/comingSoon.jpg": "/static/media/comingSoon.9067fbe2bb361b799f24.jpg",
+    "static/media/coming-soon.jpg": "/static/media/coming-soon.22cdeeea6e1c80950ee5.jpg",
+    "static/media/gastimater-background-2.jpg": "/static/media/gastimater-background-2.641acd996aa50d318b40.jpg",
+    "static/media/post-it.jpg": "/static/media/post-it.2a9b68ef6828b91a2e3a.jpg",
+    "static/media/forecast.png": "/static/media/forecast.49dffd54ed7f87ccd176.png",
+    "static/media/bananas.jpg": "/static/media/bananas.840ed7ee95ba9f3450ed.jpg",
+    "static/media/404.jpg": "/static/media/404.55a7a2c583e80946a5f9.jpg",
+    "static/media/gerald-yeo-professional-pic.jpg": "/static/media/gerald-yeo-professional-pic.1120b57fe06ded4debe5.jpg",
+    "static/media/sampleCad.png": "/static/media/sampleCad.68e4c8060504d284c056.png",
+    "static/media/cover-letter-robot.jpg": "/static/media/cover-letter-robot.133dbc29138b883aee58.jpg",
+    "index.html": "/index.html",
+    "main.eb5c6027.css.map": "/static/css/main.eb5c6027.css.map",
+    "main.649199b4.js.map": "/static/js/main.649199b4.js.map",
+    "787.f712bc99.chunk.js.map": "/static/js/787.f712bc99.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb5c6027.css",
+    "static/js/main.649199b4.js"
+  ]
+}
