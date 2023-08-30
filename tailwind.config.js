@@ -6,7 +6,9 @@ module.exports = {
       backgroundImage: {
         'orange-doggo': "url('/src/imgs/orange-texture.jpg')",
         'brown-wood-1': "url('/src/imgs/brown-wooden-floor.jpg')",
-        'white-marble-1': "url('/src/imgs/white-marble.jpg')"
+        'white-marble-1': "url('/src/imgs/white-marble.jpg')",
+        'gastimater': "url('/src/imgs/gastimater-background-2.jpg')",
+        'red-portal': "url('/src/imgs/red-portal.jpg')"
       }, 
       borderRadius: {
         'none': '0',

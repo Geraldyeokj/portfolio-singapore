@@ -7,6 +7,8 @@ import bananas from "../imgs/bananas.jpg"
 import geraldYeo from "../imgs/gerald-yeo-professional-pic.jpg"
 import sampleCad from "../imgs/sampleCad.png"
 import forecast from "../imgs/forecast.png"
+import { PortalCard } from '../components/Directory/PortalCard';
+import redportalresized from "../imgs/red-portal-resized.gif"
 
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -83,26 +85,43 @@ const Home = (props) => {
         <div className='flex justify-center items-center h-screen w-full bg-brown-wood-1 bg-cover bg-center p-5 md:p-10'>
             <div className={'flex justify-center items-center bg-white/30 rounded-2xl lg:rounded-[50px] h-full w-full ' + (isVertical ? "px-3 md:px-10" : "py-3 md:py-10")}>
                 <div className={cardContainerClassNames}>
-                    <ProjectCard 
-                        Title="Cover Letter Generator"
+                    <PortalCard 
+                        Title="Production"
                         Vertical = {isVertical}
                         SizeStyle = {sizeStyle} 
                         TextTailwind={textTailwind}
                         TitleTailwind={titleTailwind}
                         Navigate={false}
-                        Link="https://coverletterv1.herokuapp.com/"
-                        Image={coverLetterRobot}
+                        Image={redportalresized}
+                        Link="https://ytwdvwu1k2.execute-api.us-east-2.amazonaws.com/"
                         Description={
-                            <>
-                                <span className='font-bold'>Overview: </span> Generates cover letters cost-effectively with OpenAI’s GPT-3 model and custom prompts given a user’s resume and a job description.
-                                <div className='pt-1'></div>
-                                <span className='font-bold'>Tech Stack: </span> (Front-end) React, JavaScript.
-                                <div className='pt-1'></div>
-                                <div className='font-bold text-center'>UNMAINTAINED</div>
-                            </>
+                            <div className='font-bold text-xl text-center h-max'>
+                                Back to the stable stuff
+                            </div>
                         }
                         Progress={
                             <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </PortalCard>
+                    <ProjectCard 
+                        Title="ETH Guesstimater"
+                        Vertical = {isVertical}
+                        SizeStyle = {sizeStyle} 
+                        TextTailwind={textTailwind}
+                        TitleTailwind={titleTailwind}
+                        Navigate={true}
+                        Image={forecast}
+                        Link="/ethgastimater"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> A web app that lets you know when you should make transactions in ETH to reduce gas fees.
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> React, Python, JavaScript, CRA, Tailwind, PostgreSQL.
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>70% Complete</span> 
                         }
                     >
                     </ProjectCard>
@@ -151,6 +170,29 @@ const Home = (props) => {
                     >
                     </ProjectCard>
                     <ProjectCard 
+                        Title="Cover Letter Generator"
+                        Vertical = {isVertical}
+                        SizeStyle = {sizeStyle} 
+                        TextTailwind={textTailwind}
+                        TitleTailwind={titleTailwind}
+                        Navigate={false}
+                        Link="https://coverletterv1.herokuapp.com/"
+                        Image={coverLetterRobot}
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> Generates cover letters cost-effectively with OpenAI’s GPT-3 model and custom prompts given a user’s resume and a job description.
+                                <div className='pt-1'></div>
+                                <span className='font-bold'>Tech Stack: </span> (Front-end) React, JavaScript.
+                                <div className='pt-1'></div>
+                                <div className='font-bold text-center'>UNMAINTAINED</div>
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </ProjectCard>
+                    <ProjectCard 
                         Title="Gerald's LinkedIn"
                         Vertical = {isVertical}
                         SizeStyle = {sizeStyle} 
@@ -168,27 +210,6 @@ const Home = (props) => {
                         }
                         Progress={
                             <span className='font-bold'>100% Complete</span> 
-                        }
-                    >
-                    </ProjectCard>
-                    <ProjectCard 
-                        Title="ETH Guesstimater"
-                        Vertical = {isVertical}
-                        SizeStyle = {sizeStyle} 
-                        TextTailwind={textTailwind}
-                        TitleTailwind={titleTailwind}
-                        Navigate={true}
-                        Image={forecast}
-                        Link="/ethgastimater"
-                        Description={
-                            <>
-                                <span className='font-bold'>Overview: </span> A web app that lets you know when you should make transactions in ETH to reduce gas fees.
-                                <div className='pt-2'></div>
-                                <span className='font-bold'>Tech Stack: </span> React, Python, JavaScript, CRA, Tailwind, MongoDB.
-                            </>
-                        }
-                        Progress={
-                            <span className='font-bold'>50% Complete</span> 
                         }
                     >
                     </ProjectCard>

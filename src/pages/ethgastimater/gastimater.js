@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { MyResponsiveLine } from './nivoLine2';
+import { Button, Space } from 'antd';
 
 const fetchYhat = () => {
     try {
@@ -54,7 +55,6 @@ const fetchYhat = () => {
 const LineChartTemplate = () => {
     const [data, setData] = useState([]);
     const [lastUpdated, setLastUpdated] = useState();
-    const [firstRun, setFirstRun] = useState(true);
     const fetchMetrics = () => {
         // retrieve and then setData()
         fetchYhat().then(info => {
@@ -69,26 +69,25 @@ const LineChartTemplate = () => {
         })
     }
     useEffect(() => {
-        if (firstRun) {
-            fetchMetrics();
-            setFirstRun(false);
-        } else {
-            const interval = setInterval(() => {
-                fetchMetrics();
-            },60*1000);
-            return () => clearInterval(interval);
-        }
+        fetchMetrics();
     }, []);
+
 	return (
         <>
             { data.length ?
                 <div className="h-screen w-full py-14">
-                    <div className='text-center text-2xl'>
+                    <div className='text-center text-3xl text-neutral-700'>
                         Estimated Gas Prices For The Next 12 Hours
                     </div>
                     {data[0] ? MyResponsiveLine({data}) : "Unable to retrieve data :/"}
-                    <div className='justify-center items-center w-full'>
-                        <div className='text-right pb-5 pr-5'>
+                    <div className='flex flex-row justify-end items-start w-full'>
+                        <Button 
+                            className='justify-end items-start'
+                            onClick={() => {fetchMetrics()}}
+                        >
+                            Refresh
+                        </Button>
+                        <div className='items-center text-center pb-5 pr-5 pl-5 text-neutral-700'>
                             Last Updated: {lastUpdated}
                         </div>
                     </div>
