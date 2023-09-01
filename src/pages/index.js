@@ -194,25 +194,6 @@ const Home = (props) => {
                         }
                     >
                     </ProjectCard>
-                    <PortalCard 
-                        Title="Legacy"
-                        Vertical = {isVertical}
-                        SizeStyle = {sizeStyle} 
-                        TextTailwind={textTailwind}
-                        TitleTailwind={titleTailwind}
-                        Navigate={false}
-                        Image={redportalresized}
-                        Link="https://ytwdvwu1k2.execute-api.us-east-2.amazonaws.com/"
-                        Description={
-                            <div className='font-bold text-xl text-center h-max'>
-                                Back to the stable stuff
-                            </div>
-                        }
-                        Progress={
-                            <span className='font-bold'>100% Complete</span> 
-                        }
-                    >
-                    </PortalCard>
                 </div>
             </div>
         </div>

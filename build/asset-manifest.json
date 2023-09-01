@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.eb5c6027.css",
-    "main.js": "/static/js/main.f5a7762a.js",
+    "main.css": "/static/css/main.675accfc.css",
+    "main.js": "/static/js/main.0d87ffaf.js",
     "static/js/787.f712bc99.chunk.js": "/static/js/787.f712bc99.chunk.js",
     "static/media/red-portal-resized.gif": "/static/media/red-portal-resized.619b7cf4e540b72b4c5e.gif",
     "static/media/brown-wooden-floor.jpg": "/static/media/brown-wooden-floor.ba4f66d794097b62fe93.jpg",
@@ -19,12 +19,12 @@
     "static/media/sampleCad.png": "/static/media/sampleCad.68e4c8060504d284c056.png",
     "static/media/cover-letter-robot.jpg": "/static/media/cover-letter-robot.133dbc29138b883aee58.jpg",
     "index.html": "/index.html",
-    "main.eb5c6027.css.map": "/static/css/main.eb5c6027.css.map",
-    "main.f5a7762a.js.map": "/static/js/main.f5a7762a.js.map",
+    "main.675accfc.css.map": "/static/css/main.675accfc.css.map",
+    "main.0d87ffaf.js.map": "/static/js/main.0d87ffaf.js.map",
     "787.f712bc99.chunk.js.map": "/static/js/787.f712bc99.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb5c6027.css",
-    "static/js/main.f5a7762a.js"
+    "static/css/main.675accfc.css",
+    "static/js/main.0d87ffaf.js"
   ]
 }
