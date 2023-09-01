@@ -107,27 +107,6 @@ const Home = (props) => {
                     >
                     </ProjectCard>
                     <ProjectCard 
-                        Title="CAD Designs"
-                        Vertical = {isVertical}
-                        SizeStyle = {sizeStyle} 
-                        TextTailwind={textTailwind}
-                        TitleTailwind={titleTailwind}
-                        Navigate={false}
-                        Image={sampleCad}
-                        Link="https://geraldyeo.site/"
-                        Description={
-                            <>
-                                <span className='font-bold'>Overview: </span> CAD designs of non-confidential products I worked on as a Product Manager in the Army.
-                                <div className='pt-2'></div>
-                                <span className='font-bold'>Tech Stack: </span> Sketchup, Cura, Wordpress.
-                            </>
-                        }
-                        Progress={
-                            <span className='font-bold'>100% Complete</span> 
-                        }
-                    >
-                    </ProjectCard>
-                    <ProjectCard 
                         Title="GoingBananas"
                         Vertical = {isVertical}
                         SizeStyle = {sizeStyle} 
