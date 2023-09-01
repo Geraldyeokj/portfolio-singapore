@@ -85,25 +85,6 @@ const Home = (props) => {
         <div className='flex justify-center items-center h-screen w-full bg-brown-wood-1 bg-cover bg-center p-5 md:p-10'>
             <div className={'flex justify-center items-center bg-white/30 rounded-2xl lg:rounded-[50px] h-full w-full ' + (isVertical ? "px-3 md:px-10" : "py-3 md:py-10")}>
                 <div className={cardContainerClassNames}>
-                    <PortalCard 
-                        Title="Production"
-                        Vertical = {isVertical}
-                        SizeStyle = {sizeStyle} 
-                        TextTailwind={textTailwind}
-                        TitleTailwind={titleTailwind}
-                        Navigate={false}
-                        Image={redportalresized}
-                        Link="https://ytwdvwu1k2.execute-api.us-east-2.amazonaws.com/"
-                        Description={
-                            <div className='font-bold text-xl text-center h-max'>
-                                Back to the stable stuff
-                            </div>
-                        }
-                        Progress={
-                            <span className='font-bold'>100% Complete</span> 
-                        }
-                    >
-                    </PortalCard>
                     <ProjectCard 
                         Title="ETH Guesstimater"
                         Vertical = {isVertical}
@@ -115,13 +96,34 @@ const Home = (props) => {
                         Link="/ethgastimater"
                         Description={
                             <>
-                                <span className='font-bold'>Overview: </span> A web app that lets you know when you should make transactions in ETH to reduce gas fees.
+                                <span className='font-bold'>Overview: </span> A web app that predicts ETH gas prices in the next 12 hours.
                                 <div className='pt-2'></div>
-                                <span className='font-bold'>Tech Stack: </span> React, Python, JavaScript, CRA, Tailwind, PostgreSQL.
+                                <span className='font-bold'>Tech Stack: </span> React, Python, JavaScript, Tailwind, PostgreSQL, EC2, RDS, CloudFront.
                             </>
                         }
                         Progress={
                             <span className='font-bold'>70% Complete</span> 
+                        }
+                    >
+                    </ProjectCard>
+                    <ProjectCard 
+                        Title="CAD Designs"
+                        Vertical = {isVertical}
+                        SizeStyle = {sizeStyle} 
+                        TextTailwind={textTailwind}
+                        TitleTailwind={titleTailwind}
+                        Navigate={false}
+                        Image={sampleCad}
+                        Link="https://geraldyeo.site/"
+                        Description={
+                            <>
+                                <span className='font-bold'>Overview: </span> CAD designs of non-confidential products I worked on as a Product Manager in the Army.
+                                <div className='pt-2'></div>
+                                <span className='font-bold'>Tech Stack: </span> Sketchup, Cura, Wordpress.
+                            </>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
                         }
                     >
                     </ProjectCard>
@@ -141,27 +143,6 @@ const Home = (props) => {
                                 <span className='font-bold'>Tech Stack: </span> HTML, CSS, JavaScript, EJS, Node.js, Express.js, MongoDB Atlas.
                                 <div className='pt-1'></div>
                                 <div className='font-bold text-center'>UNMAINTAINED</div>
-                            </>
-                        }
-                        Progress={
-                            <span className='font-bold'>100% Complete</span> 
-                        }
-                    >
-                    </ProjectCard>
-                    <ProjectCard 
-                        Title="CAD Designs & GIS Analysis"
-                        Vertical = {isVertical}
-                        SizeStyle = {sizeStyle} 
-                        TextTailwind={textTailwind}
-                        TitleTailwind={titleTailwind}
-                        Navigate={false}
-                        Image={sampleCad}
-                        Link="https://geraldyeo.site/"
-                        Description={
-                            <>
-                                <span className='font-bold'>Overview: </span> CAD designs of products I worked on as a Product Manager in the Army and GIS analyses I did in school.
-                                <div className='pt-2'></div>
-                                <span className='font-bold'>Tech Stack: </span> Sketchup, Cura, R, Wordpress.
                             </>
                         }
                         Progress={
@@ -234,6 +215,25 @@ const Home = (props) => {
                         }
                     >
                     </ProjectCard>
+                    <PortalCard 
+                        Title="Legacy"
+                        Vertical = {isVertical}
+                        SizeStyle = {sizeStyle} 
+                        TextTailwind={textTailwind}
+                        TitleTailwind={titleTailwind}
+                        Navigate={false}
+                        Image={redportalresized}
+                        Link="https://ytwdvwu1k2.execute-api.us-east-2.amazonaws.com/"
+                        Description={
+                            <div className='font-bold text-xl text-center h-max'>
+                                Back to the stable stuff
+                            </div>
+                        }
+                        Progress={
+                            <span className='font-bold'>100% Complete</span> 
+                        }
+                    >
+                    </PortalCard>
                 </div>
             </div>
         </div>
