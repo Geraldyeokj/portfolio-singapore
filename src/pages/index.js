@@ -96,7 +96,7 @@ const Home = (props) => {
                         Link="/ethgastimater"
                         Description={
                             <>
-                                <span className='font-bold'>Overview: </span> A web app that predicts ETH gas prices in the next 12 hours.
+                                <span className='font-bold'>Overview: </span> A web app that aims to help you reduce ETH transaction costs by predicting ETH gas prices in the next 12 hours.
                                 <div className='pt-2'></div>
                                 <span className='font-bold'>Tech Stack: </span> React, Python, JavaScript, Tailwind, PostgreSQL, EC2, RDS, CloudFront.
                             </>
